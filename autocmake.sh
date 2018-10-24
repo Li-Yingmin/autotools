@@ -3,20 +3,20 @@ CURRENT_DIR=$(pwd)
 cd $CURRENT_DIR
 
 if [ -d "build/" ];then
-  echo "-- [rm build dir build...]"
+  echo "-- sh [rm build dir build...]"
   rm -rf build
   mkdir build
   cd build
-  echo "-- [cmake ..]"
+  echo "-- sh [cmake ..]"
   cmake ..
-  echo "-- [make -j4]"
+  echo "-- sh [make -j4]"
   make -j4
 else
-  echo "-- create build dir..."
+  echo "-- sh [create build dir...]"
   mkdir build
   cd build
-  echo "-- [cmake ..]"
+  echo "-- sh [cmake ..]"
   cmake ..
-  echo "-- [make -j4]"
+  echo "-- sh [make -j4]"
   make -j4
 fi
