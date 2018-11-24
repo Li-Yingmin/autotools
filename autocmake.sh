@@ -16,7 +16,7 @@ if [ -d "build/" ];then
   echo "-- sh [cmake ..]"
   cmake ..
   echo "-- sh [make -j4]"
-  make -j4
+  make -j
 else
   echo "-- sh [create build dir...]"
   mkdir build
@@ -24,5 +24,5 @@ else
   echo "-- sh [cmake ..]"
   cmake ..
   echo "-- sh [make -j4]"
-  make -j4
+  make -j
 fi
