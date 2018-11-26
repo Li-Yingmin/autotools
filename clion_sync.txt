@@ -1,0 +1,1 @@
+.svn;.cvs;.idea;.DS_Store;.git;.hg;*.hprof;*.pyc;.vscode;cmake-build-debug;cmake-build-release;build;build_doc;/output;*.iml;.sln;*.swp;.gradle;third_module;.tmp;*.tmp;.gitignore
