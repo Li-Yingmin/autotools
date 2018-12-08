@@ -7,6 +7,7 @@ chmod +x gradlew
 echo "-- sh [exec gradlew]"
 ./gradlew
 
+multi="$1"
 
 if [ -d "build/" ];then
   echo "-- sh [rm build dir build...]"
@@ -15,14 +16,14 @@ if [ -d "build/" ];then
   cd build
   echo "-- sh [cmake ..]"
   cmake ..
-  echo "-- sh [make -j4]"
-  make
+  echo "-- sh [make]"
+  make $multi
 else
   echo "-- sh [create build dir...]"
   mkdir build
   cd build
   echo "-- sh [cmake ..]"
   cmake ..
-  echo "-- sh [make -j4]"
-  make
+  echo "-- sh [make]"
+  make $multi
 fi
