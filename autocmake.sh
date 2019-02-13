@@ -12,6 +12,9 @@ multi="$1"
 if [[ -d "build/" ]];then
   echo "-- sh [rm build dir build...]"
   rm -rf build
+  rm -rf output
+  rm -rf *.tmp
+  rm -rf .gradle
   mkdir build
   cd build
   echo "-- sh [cmake ..]"
@@ -20,6 +23,10 @@ if [[ -d "build/" ]];then
   make ${multi}
 else
   echo "-- sh [create build dir...]"
+  rm -rf build
+  rm -rf output
+  rm -rf *.tmp
+  rm -rf .gradle
   mkdir build
   cd build
   echo "-- sh [cmake ..]"
